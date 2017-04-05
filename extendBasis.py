@@ -1,9 +1,14 @@
 import numpy as np
 dim = int(raw_input("Enter the number of dimensions :"))
 matrix = []
+print "Enter the matrix : "
 for i in range(dim):
 	vector = list(map(int,raw_input().split()))
 	matrix.append(vector)
+
+print
+print "Starting the extension -------------------"
+print
 
 def extend(matrix,n):
 	orthonorm = gramSchmidt(matrix,n)
