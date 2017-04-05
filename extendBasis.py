@@ -14,10 +14,9 @@ def extend(matrix,n):
 		ext_matrix.append(x)
 	zeros = np.zeros(n)
 	y = zeros.tolist()
-	y.append(5)
+	y.append(1)
 	ext_matrix.append(y)
-	n+=1
-	print np.array(ext_matrix)
+	return ext_matrix
 
 def gramSchmidt(matrix,n):
 	orthonorm = []
@@ -29,4 +28,10 @@ def gramSchmidt(matrix,n):
 		orthonorm.append((b-zeros)/np.dot(b-zeros,b-zeros)**0.5)
 	return np.array(orthonorm)
 
-extend(matrix,dim)
+for i in range(dim,10):
+	print i+1
+	print "--------------------------------------"
+	new_matrix = extend(matrix, i)
+	print np.array(new_matrix)
+	print "--------------------------------------"
+	matrix = new_matrix
