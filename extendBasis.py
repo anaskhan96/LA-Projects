@@ -1,4 +1,5 @@
 import numpy as np
+from random import randint
 dim = int(raw_input("Enter the number of dimensions :"))
 matrix = []
 print "Enter the matrix : "
@@ -20,7 +21,7 @@ def extend(matrix, n):
         ext_matrix.append(x)
     zeros = np.zeros(n)
     y = zeros.tolist()
-    y.append(1)
+    y.append(randint(1,9))
     ext_matrix.append(y)
     return ext_matrix
 
