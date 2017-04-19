@@ -23,7 +23,7 @@ def extend(matrix, n):
         ext_matrix.append(x)
     zeros = np.zeros(n)
     y = zeros.tolist()
-    y.append(randint(1,9))
+    y.append(randint(1, 9))
     ext_matrix.append(y)
     return ext_matrix
 
@@ -46,4 +46,4 @@ for i in range(dim, 10):
     print np.array(new_matrix)
     print "--------------------------------------"
     matrix = new_matrix
-    print '-----------%s seconds-----------' %(time() - start)
+    print '-----------%s seconds-----------' % (time() - start)
