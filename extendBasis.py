@@ -40,7 +40,7 @@ def gramSchmidt(matrix, n):
         zeros = np.zeros(n)
         for v in orthonorm:
             zeros += np.dot(b, v) / np.dot(v, v) * v
-        # Dividing by its norm to make it a unit vecotor
+        # Dividing by its norm to make it a unit vector
         orthonorm.append((b - zeros) / np.dot(b - zeros, b - zeros)**0.5)
     return np.array(orthonorm)
 
