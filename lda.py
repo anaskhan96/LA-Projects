@@ -5,13 +5,18 @@ feature1 = [0.5, 1, 1, 1.5, 1.5, 2, 3, 3.5, 3.5, 4, 4.5]
 feature2 = [1.5, 1.5, 2, 2, 2.5, 2.5, 1, 1, 2, 2, 2]
 classType = np.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1])
 
+# Function to find the final pivot, used to classify the data input by user
+
 
 def find_pivot(f1, f2):
     f1 = np.array(f1)
     f2 = np.array(f2)
     pivot_arr = calculate_pivot(f1, f2)
+    # Finding the final pivot from all the individual ones
     end_pivot = reduce(lambda x, y: (x - y) / 2, pivot_arr)
     return end_pivot
+
+# Function used to calculate pivot each time
 
 
 def calculate_pivot(f1, f2):
