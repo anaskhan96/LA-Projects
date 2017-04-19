@@ -1,4 +1,5 @@
 import numpy as np
+from time import time
 from random import randint
 dim = int(raw_input("Enter the number of dimensions :"))
 matrix = []
@@ -10,6 +11,7 @@ for i in range(dim):
 print
 print "Starting the extension -------------------"
 print
+start = time()
 
 
 def extend(matrix, n):
@@ -44,3 +46,4 @@ for i in range(dim, 10):
     print np.array(new_matrix)
     print "--------------------------------------"
     matrix = new_matrix
+    print '-----------%s seconds-----------' %(time() - start)
